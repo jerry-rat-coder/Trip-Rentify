@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        :root {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .main {
+            height: 100vh;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .big {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: rgb(212 212 212 / 0.7);
+                position: relative;
+                .small {
+                    position: absolute;
+                    z-index: 10;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: #000;
+                    background-color: rgba(255, 255, 255, 0.76);
+                    /* top: -50px; */
+                    left: 50%;
+                    
+                    transform: translateX(-50%);
+                    /* transform-origin: ; */
+                }
+            }
+        }
+        .big-circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 150px auto; /* 为了让旋转更容易观察 */
+            overflow: visible;
+            .small-circle {
+                position: absolute;
+                top: -25px;  /* 将小圆定位到大圆的底部 */
+                left: 50%;  /* 使小圆水平居中 */
+                width: 50px;
+                height: 50px;
+                background-color: #333;
+                border-radius: 50%;
+                margin-left: -25px; /* 将小圆向左移动一半，使其水平居中 */
+                animation: rotate 5s linear forwards;
+                transform-origin: 25px 125px; /* 设置旋转中心为大圆的中心 */
+            }
+        }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: rotate(90deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="big-circle">
+            <div class="small-circle"></div>
+        </div>
+    </div>
+</body>
+</html>
