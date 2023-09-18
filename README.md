@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth
 
-## Getting Started
+This is a repository for a Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth.
 
-First, run the development server:
+Features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- 使用Tailwind实现完全响应式设计的页面和动画效果
+- 凭证身份验证
+- Google身份验证
+- Github身份验证
+- 使用Cloudinary CDN上传图片
+- 使用react-hook-form进行客户端表单验证和处理
+- 使用react-toast处理服务器错误
+- 使用react-date-range实现日历功能
+- 页面加载状态
+- 页面空状态
+- 预定/预约系统
+- 客人预约取消功能
+- 业主预约取消功能
+- 创建和删除房产信息
+- 价格计算功能
+- 根据类别、日期范围、地图位置、客人数量、房间和浴室进行高级搜索
+- 例如，我们会筛选出在您希望出行的日期范围内已有预定的房产
+- 收藏功能
+- 在路由处理器中编写POST和DELETE路由的方法
+- 在服务器React组件中直接访问数据库获取数据的方法而无需通过API
+- 处理像error.tsx和loading.tsx这样的文件（Next 13），用于统一加载和错误处理
+- 处理Server和Child组件之间的关系
+
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+
+
+
+
+### Install packages
+
+```
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Setup .env file
 
-## Learn More
+```
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+NEXTAUTH_SECRET=
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Setup Prisma
 
-## Deploy on Vercel
+```
+npx prisma db push
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Start the app
+
+```
+npm run dev
+```
