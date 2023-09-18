@@ -14,10 +14,13 @@ import Heading from '../Heading'
 import Input from '../inputs/Input'
 import {toast} from 'react-hot-toast'
 import Button from '../Button'
+import useLoginModal from '@/hooks/useLoginModal'
 
 
 const RegisterModal = () => {
     const registerModal = useRegisterModal();
+    const loginModal = useLoginModal();
+
     const [ isLoading, setIsLoading ] = useState(false);
 
     const { 
@@ -33,6 +36,11 @@ const RegisterModal = () => {
             password: ''
         }
     })
+
+    const toggleModal = useCallback(() => {
+        registerModal.onClose();
+        loginModal.onOpen();
+    }, []);
     
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);
@@ -102,7 +110,9 @@ const RegisterModal = () => {
             <div className=' text-neutral-500 text-center mt-4 font-light'>
                 <div className=' flex justify-center items-center gap-2'>
                     Already have an account?
-                    <div className=' text-neutral-800 cursor-pointer hover:underline'>
+                    <div 
+                    onClick={() => {toggleModal()}}
+                    className=' text-neutral-800 cursor-pointer hover:underline'>
                         Log in
                     </div>
                 </div>

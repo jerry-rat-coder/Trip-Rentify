@@ -10,6 +10,7 @@ import { User } from '@prisma/client';
 import { signOut } from 'next-auth/react'
 import toast from 'react-hot-toast';
 import { delay } from '@/utils/delay';
+import useRentModal from '@/hooks/useRentModal';
 
 
 interface UserMenuProps {
@@ -22,6 +23,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
     // console.log({currentUser});
     const registerModal = useRegisterModal(); 
     const loginModal = useLoginModal();
+    const rentModal = useRentModal();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -36,11 +38,20 @@ const UserMenu: React.FC<UserMenuProps> = ({
         .then(() => {signOut()});
     }, []);
 
+    const onRent = useCallback(() => {
+        if(!currentUser) {
+            return loginModal.onOpen();
+        }
+
+        //rent
+        rentModal.onOpen();
+    }, [currentUser, loginModal]);
+
     return ( 
         <div className="relative">
             <div className="flex flex-row items-center gap-3">
                 <div
-                onClick={() => {}}
+                onClick={() => {onRent()}}
                 className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer"
                 >
                     Airbnb your home
