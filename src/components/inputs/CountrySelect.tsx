@@ -2,7 +2,6 @@
 
 import useCountries from '@/hooks/useCountries';
 import Select from 'react-select'
-// import { countries } from 'country-flag-icons';
 import Flag from '@/components/Flag'
 
 export type CountrySelectValue = {

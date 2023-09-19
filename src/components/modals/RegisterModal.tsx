@@ -96,16 +96,16 @@ const RegisterModal = () => {
         <div className='flex flex-col gap-3 mt-3'>
             <hr />
             <Button 
-                outline
-                label='Continue with Google'
-                onClick={() => {}}
-                icon={FcGoogle}
+              outline
+              label='Continue with Google'
+              onClick={() => {}}
+              icon={FcGoogle}
             />
             <Button 
-                outline
-                label='Continue with Github'
-                onClick={() => {}}
-                icon={AiFillGithub}
+              outline
+              label='Continue with Github'
+              onClick={() => {}}
+              icon={AiFillGithub}
             />
             <div className=' text-neutral-500 text-center mt-4 font-light'>
                 <div className=' flex justify-center items-center gap-2'>
@@ -122,14 +122,14 @@ const RegisterModal = () => {
 
     return ( 
         <Modal 
-            isOpen={registerModal.isOpen}
-            disabled={isLoading}
-            title='Register'
-            actionLabel='Continue'
-            onSubmit={handleSubmit(onSubmit)}
-            onClose={registerModal.onClose}
-            body={bodyContent}
-            footer={footerContent}
+          isOpen={registerModal.isOpen}
+          disabled={isLoading}
+          title='Register'
+          actionLabel='Continue'
+          onSubmit={handleSubmit(onSubmit)}
+          onClose={registerModal.onClose}
+          body={bodyContent}
+          footer={footerContent}
         />
     );
 }
