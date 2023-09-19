@@ -1,5 +1,6 @@
 
 import './globals.css'
+// import 'flag-icon-css/css/flag-icons.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import Modal from '@/components/modals/Modal'
@@ -12,6 +13,7 @@ import LoginModal from '@/components/modals/LoginModal'
 import getCurrentUser from '@/actions/getCurrentUser'
 import { User } from '@prisma/client'
 import RentModal from '@/components/modals/RentModal'
+
 
 const font = Nunito({ subsets: ['latin'] })
 
