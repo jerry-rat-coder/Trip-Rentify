@@ -1,5 +1,4 @@
 import countries from "world-countries";
-// import { countries } from 'country-flag-icons'
 import { countries as flags } from 'country-flag-icons';
 
 const formattedCountries = countries.map((country, index) => ({

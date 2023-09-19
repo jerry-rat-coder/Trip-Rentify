@@ -4,6 +4,7 @@ import Container from "../Container";
 
 import { categories } from "@/libs/categories";
 import CategoryBox from "../CategoryBox";
+import { usePathname, useSearchParams } from "next/navigation";
 
 
 // export const categories = [
@@ -87,20 +88,33 @@ import CategoryBox from "../CategoryBox";
 
 
 const Categories = () => {
-    return ( 
-        <Container>
-            <div className="flex flex-row justify-between items-center overflow-x-auto pt-4">
-                {
-                    categories.map(item => (
-                        <CategoryBox 
+  const params = useSearchParams();
+  const category = params?.get('category');
+  const pathname = usePathname();
+
+  const isMainPage = pathname === '/';
+
+  if(!isMainPage) {
+    return null;
+  }
+
+
+  return ( 
+      <Container>
+          <div className="flex flex-row justify-between items-center overflow-x-auto pt-4">
+              {
+                  categories.map(item => (
+                      <CategoryBox 
+                        key={item.label}
                         label={item.label}
                         icon={item.icon}
-                        />
-                    ))
-                }
-            </div>
-        </Container>
-     );
+                        selected={category === item.label}
+                      />
+                  ))
+              }
+          </div>
+      </Container>
+    );
 }
  
 export default Categories;

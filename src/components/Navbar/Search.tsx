@@ -3,7 +3,7 @@ import {BiSearch} from 'react-icons/bi'
 
 const Search = () => {
     return ( 
-        <div className="border-[1px] w-full md:w-auto py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer">
+        <div className="border-[1px] w-full md:w-auto py-2 rounded-full shadow-sm hover:shadow-md transition cursor-pointer md:ml-32">
             <div className="flex flex-row items-center justify-between">
                 {/* <div className='sm:hidden' /> */}
                 <div className="text-sm font-semibold px-6 ">

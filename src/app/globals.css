@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import 'flag-icon-css/css/flag-icons.css' */
+
 html,
 body,
 :root {

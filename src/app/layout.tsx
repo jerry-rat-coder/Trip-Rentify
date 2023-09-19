@@ -1,6 +1,5 @@
 
 import './globals.css'
-// import 'flag-icon-css/css/flag-icons.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import Modal from '@/components/modals/Modal'
@@ -39,7 +38,9 @@ export default async function RootLayout({
           <RentModal />
           <Navbar currentUser={user} />
         </ClientOnly>
-        {children}
+        <div className='pb-20 pt-28'>
+          {children}
+        </div>
       </body>
     </html>
   )
