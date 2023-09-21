@@ -25,7 +25,10 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
     onChange(result.info.secure_url);
   }, [onChange]);
 
+  console.log('图片', value);
+
   return (
+    // console.log(value);
     <CldUploadWidget 
       onUpload={handleUpload} 
       uploadPreset={uploadPreset}

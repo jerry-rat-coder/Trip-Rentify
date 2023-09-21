@@ -11,10 +11,11 @@ import { signOut } from 'next-auth/react'
 import toast from 'react-hot-toast';
 import { delay } from '@/utils/delay';
 import useRentModal from '@/hooks/useRentModal';
+import { SafeUser } from '@/types';
 
 
 interface UserMenuProps {
-    currentUser: User | null;
+    currentUser: SafeUser | null;
 }
 
 const UserMenu: React.FC<UserMenuProps> = ({
