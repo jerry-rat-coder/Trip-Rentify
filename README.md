@@ -1,6 +1,6 @@
-# Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth
+完整在线民宿预定旅途租房应用；
 
-This is a repository for a Full Stack Airbnb Clone with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth.
+功能包括预定租房，添加收藏和在线出租；技术栈：Next.js, React Hooks, Tailwind
 
 Features:
 
