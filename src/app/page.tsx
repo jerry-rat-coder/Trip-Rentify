@@ -5,7 +5,7 @@ import Container from '@/components/Container'
 // import Image from 'next/image'
 import EmptyState from '@/components/EmptyState';
 import ListingCard from '@/components/listing/ListingCard';
-import { SafeUser } from '@/types';
+// import { SafeUser } from '@/types';
 
 export default async function Home() {
   // const isEmpty = false;
