@@ -70,6 +70,10 @@ export default async function getListings(
               {
                 startDate: { lte: endDate },
                 endDate: { gte: endDate }
+              },
+              {
+                startDate: { gte: startDate },
+                endDate: { lte: endDate }
               }
             ]
           }

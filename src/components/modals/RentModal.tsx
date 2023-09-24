@@ -34,7 +34,7 @@ const RentModal = () => {
     const router = useRouter();
 
     const [step, setStep] = useState(STEPS.CATEGORY);
-    const [ isLoading, setIsLoading ] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const {
       register,
