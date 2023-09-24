@@ -3,9 +3,9 @@
 import { IconType } from "react-icons";
 
 interface ListingCategoryProps {
-  label: string
+  label?: string
   icon: IconType
-  description: string
+  description?: string
 }
 
 const ListingCategory:React.FC<ListingCategoryProps> = ({

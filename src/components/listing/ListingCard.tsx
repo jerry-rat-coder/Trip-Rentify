@@ -18,6 +18,7 @@ interface ListingCardProps {
   actionLabel?: string
   actionId?: string
   currentUser?: SafeUser | null
+  bookedBy?: string
 }
 
 const ListingCard: React.FC<ListingCardProps> = ({
@@ -27,7 +28,8 @@ const ListingCard: React.FC<ListingCardProps> = ({
   disabled,
   actionLabel,
   actionId = "",
-  currentUser
+  currentUser,
+  bookedBy
 }) => {
   const router = useRouter();
   const { getByValue } = useCountries();
@@ -90,6 +92,13 @@ const ListingCard: React.FC<ListingCardProps> = ({
       <div className=" font-semibold text-lg">
         {location?.region}, {location?.label}
       </div>
+      {
+        bookedBy && (
+          <div className="font-bold text-base">
+            <span className=" text-neutral-500 font-light">reserved by</span> {bookedBy}
+          </div>
+        )
+      }
       <div className=" font-light text-neutral-500">
         {reservationDate || data.category}
       </div>
@@ -97,7 +106,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
         <div className="font-semibold">
           $ {price}
         </div>
-        { !reservation && (
+        { !reservation  && (
           <div className="font-light">
             night
           </div>

@@ -56,7 +56,7 @@ const LoginModal = () => {
         }).then(res => {
             setIsLoading(false);
 
-            if(res?.ok) {
+            if(res?.ok && !res?.error) {
                 toast.success('Logged in!');
                 router.refresh();
                 loginModal.onClose();

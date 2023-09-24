@@ -13,7 +13,7 @@ interface ListingInfoProps {
     icon: IconType,
     description: string,
     label: string
-  },
+  } | undefined,
   guestCount: number,
   bathroomCount: number,
   roomCount: number,
@@ -52,11 +52,15 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
         </div>
       </div>
       <hr />
-      <ListingCategory 
-        label={category.label}
-        description={category.description}
-        icon={category.icon}
-      />
+      {
+        category && (
+          <ListingCategory 
+            label={category?.label}
+            description={category?.description}
+            icon={category.icon}
+          />
+        )
+      }
       <hr />
       <div className=" font-light text-neutral-500 text-lg">{description}</div>
       <hr />
