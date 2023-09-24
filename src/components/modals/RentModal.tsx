@@ -122,7 +122,7 @@ const RentModal = () => {
 
     const bodyContents = [
         (
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8" key={'CATEGORY'}>
                 <Heading
                   title="Which of these best describes your place?"
                   subtitle="Pick a category"
@@ -148,7 +148,7 @@ const RentModal = () => {
             </div>
         ),
         (
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8" key={'LOCATION'}>
                 <Heading
                   title="Where is your place located?"
                   subtitle="Help guests find you!"
@@ -161,7 +161,7 @@ const RentModal = () => {
             </div>
         ),
         (        
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8" key={'INFO'}>
                 <Heading
                   title="Share some basics about your place"
                   subtitle="What amenitis do you have?"
@@ -189,7 +189,7 @@ const RentModal = () => {
             </div>
         ),
         (
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8" key={"IMAGES"}>
             <Heading
               title="Add a photo of your place"
               subtitle="Show guests what your place looks like!"
@@ -201,7 +201,7 @@ const RentModal = () => {
           </div>
         ),
         (
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8" key={"DESCIPTION"}>
             <Heading
               title="How would you describe your place?"
               subtitle="Short and sweet works best!"
@@ -226,7 +226,7 @@ const RentModal = () => {
           </div>
         ),
         (
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8" key={"PRICE"}>
             <Heading
               title="Now, set your price"
               subtitle="How much do you charge per night?"

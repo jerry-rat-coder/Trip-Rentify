@@ -8,7 +8,7 @@ import ListingInfo from "./ListingInfo";
 import { categories } from "@/libs/categories";
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { SafeListing, SafeReservation, SafeUser } from "@/types";
-import { Reservation } from "@prisma/client";
+
 import { Range } from 'react-date-range'
 
 import { useRouter } from "next/navigation";
@@ -64,7 +64,7 @@ const ListingClient:React.FC<ListingClientProps> = ({
   
   const category = useMemo(() => {
     return categories.find((item) => item.label === listing.category);
-  }, [categories, listing.category]);
+  }, [listing.category]);
 
   //action: reserve
   const onCreateReservation = useCallback(() => {

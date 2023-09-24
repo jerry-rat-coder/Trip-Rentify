@@ -45,7 +45,7 @@ const LoginModal = () => {
     const toggleModal = useCallback(() => {
         loginModal.onClose();
         registerModal.onOpen();
-    }, [LoginModal]);
+    }, [loginModal, registerModal]);
     
     const onSubmit: SubmitHandler<FieldValues> = (data) => {
         setIsLoading(true);

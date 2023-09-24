@@ -115,7 +115,7 @@ const SearchModal = () => {
 
   const bodyContents = [
     (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8" key={"LOCATION"}>
         <Heading
           title="Where do you wanna go?"
           subtitle="Find the perfect location!"
@@ -131,7 +131,7 @@ const SearchModal = () => {
       </div>
     ),
     (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8" key={"DATE"}>
         <Heading
           title="When do you plan to go?"
           subtitle="Make sure everyone is free!"
@@ -143,7 +143,7 @@ const SearchModal = () => {
       </div>
     ),
     (
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8" key={"INFO"}>
         <Heading
           title="More information"
           subtitle="Find your perfect place!"
