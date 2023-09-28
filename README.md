@@ -1,8 +1,12 @@
-完整在线民宿预定旅途租房应用；
+# 在线旅途民宿预定租房应用
 
-功能包括预定租房，添加收藏和在线出租；技术栈：Next.js, React Hooks, Tailwind
+技术栈：Next.js, React Hooks, Typescript, Tailwind, Prisma,  NextAuth, Zustand
 
-Features:
+允许用户进行预定和管理租房等基本操作。包括根据条件搜索适合的出租，出租和管理自己的房产，添加和管理出租收藏夹，用户(业主)可以管理自己的行程和房产的预定。
+
+## 在线预览：https://trip-rentify.vercel.app/
+
+### Features:
 
 - 使用Tailwind实现完全响应式设计的页面和动画效果
 - 凭证身份验证
@@ -27,13 +31,24 @@ Features:
 - 处理像error.tsx和loading.tsx这样的文件（Next 13），用于统一加载和错误处理
 - 处理Server和Child组件之间的关系
 
+### Data structure
+
+- User
+- Account
+- Listing
+- Reservation
+
+详情见schema.prisma文件
+
 ### Prerequisites
 
 **Node version 14.x**
 
 ### Cloning the repository
 
-
+```
+git clone git@github.com:jerry-rat-coder/Trip-Rentify.git
+```
 
 
 
